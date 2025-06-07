@@ -3,11 +3,11 @@ image: gitpod/workspace-base
 tasks:
 - name: install mamba
   init: |
-    cd /workspace
+    cd /workspace/install/
     wget "https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Mambaforge-24.3.0-0-Linux-x86_64.sh"
     bash Mambaforge-24.3.0-0-Linux-x86_64.sh -b -p /workspace/mambaforge && rm Mambaforge-24.3.0-0-Linux-x86_64.sh
 
-    /workspace/mambaforge/bin/mamba init bash
+    /workspace/install/mambaforge/bin/mamba init bash
     source ${HOME}/.bashrc
     mamba create -n biodiv -c conda-forge r-base r-argparse r-viridis r-minpack.lm -y
     mamba activate biodiv
@@ -16,12 +16,14 @@ tasks:
     mamba install -c bioconda fastp -y
 
     # install plink for LD-pruning, PCA, file conversion and other things
+    cd bin/
     wget "https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20241022.zip"
-    unzip plink_linux_x86_64_20241022.zip
+    unzip plink_linux_x86_64_20241022.zip; cd ..
     
     # install bwa to map reads to the reference
+    cd bin/
     git clone https://github.com/lh3/bwa.git
-    cd bwa; make; cd ..
+    cd bwa; make; cd ../..
 
     # install samtools, bcftools and vcftools to handle bam files and vcf files
     mamba install -c bioconda samtools bcftools bioconda::vcftools -y
@@ -43,7 +45,7 @@ tasks:
     #cd /workspace
     #git clone https://github.com/WCSCourses/K-mer_Biodiversity_Genomics_2025.git 
     
-    mkdir -p data/Scer && wget -P data/Scer https://sk13.cog.sanger.ac.uk/SRR3265401_{1,2}.fastq.gz  # get data from s3 bucket
+    #mkdir -p data/Scer && wget -P data/Scer https://sk13.cog.sanger.ac.uk/SRR3265401_{1,2}.fastq.gz  # get data from s3 bucket
     
     gp sync-done bundle
     
@@ -52,7 +54,7 @@ tasks:
   init: gp sync-await bundle # Wait for previous 'inits' to complete
   command: |
     cd /workspace
-    /workspace/mambaforge/bin/mamba init bash
+    /workspace/install/mambaforge/bin/mamba init bash
     source ~/.bashrc 
     mamba activate biodiv
     
