@@ -50,16 +50,18 @@ tasks:
     
     gp sync-done bundle
     
-  # in the working terminal activate the conda environment
-- name: activate mamba  
+# in the working terminal activate the conda environment
+- name: working
   init: gp sync-await bundle # Wait for previous 'inits' to complete
   command: |
-    cd /workspace
-    /workspace/mambaforge/bin/mamba init bash
-    source ~/.bashrc 
-    mamba activate biodiv
+      echo ""
+      echo "👋 Welcome to the biodiversity genomics Gitpod workspace!"
+      cd /workspace
+      /workspace/mambaforge/bin/mamba init bash
+      source ~/.bashrc 
+      mamba activate biodiv
     
-    export PATH=/workspace/bin:"$PATH"
+ export PATH=/workspace/bin:"$PATH"
 
 vscode:
   extensions:
