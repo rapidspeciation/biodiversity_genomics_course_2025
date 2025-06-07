@@ -6,7 +6,7 @@ Wellcome to the Biodiversity Genomics Course taught in CONICET, Argentina by Kar
 
 For this course, we run all commands in GitPod. You can get an account for free here: https://gitpod.io/ (50 h per month are free)
 
-You can login to our GitPod workspace via this link:
+Our GitPod workspace:
 https://gitpod.io/new/#https://github.com/rapidspeciation/biodiversity_genomics_course_2025
 
 When asked, click "continue" and wait until all tools are installed. 
