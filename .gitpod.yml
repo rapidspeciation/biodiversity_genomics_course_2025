@@ -12,11 +12,13 @@ tasks:
     mamba create -n biodiv -c conda-forge r-base r-argparse r-viridis r-minpack.lm -y
     mamba activate biodiv
 
+    mkdir bin
+
     # install fastp for filtering reads
     mamba install -c bioconda fastp -y
 
     # install plink for LD-pruning, PCA, file conversion and other things
-    mkidr bin; cd bin/
+    cd bin
     wget "https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20241022.zip"
     unzip plink_linux_x86_64_20241022.zip; cd ..
     
@@ -39,7 +41,7 @@ tasks:
     sudo apt install -y libgl1
 
     # install synteny plotter R package 
-    R -e 'install.packages("syntenyPlotteR", repo = "https://lib.ugent.be/CRAN")'
+    R -e 'install.packages("syntenyPlotteR", repo = "https://cloud.r-project.org")'
 
     # get the course data
     #cd /workspace
