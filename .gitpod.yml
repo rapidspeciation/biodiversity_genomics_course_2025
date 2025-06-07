@@ -1,7 +1,7 @@
 image: gitpod/workspace-base
 
 tasks:
-- name: install mamba
+- name: installation
   init: |
     cd /workspace/
     wget "https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Mambaforge-24.3.0-0-Linux-x86_64.sh"
@@ -56,12 +56,13 @@ tasks:
   command: |
       echo ""
       echo "👋 Welcome to the biodiversity genomics Gitpod workspace!"
+      echo "Please wait until all software is installed and data downloaded"
+      echo "You will see the $ prompt appearing when it is ready."
       cd /workspace
       /workspace/mambaforge/bin/mamba init bash
       source ~/.bashrc 
       mamba activate biodiv
-    
- export PATH=/workspace/bin:"$PATH"
+      export PATH=/workspace/bin:"$PATH"
 
 vscode:
   extensions:
