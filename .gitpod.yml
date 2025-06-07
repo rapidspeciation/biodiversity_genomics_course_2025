@@ -13,7 +13,7 @@ tasks:
     mamba activate biodiv
 
     # install fastp for filtering reads
-    mamba install -c bioconda fastp
+    mamba install -c bioconda fastp -y
 
     # install plink for LD-pruning, PCA, file conversion and other things
     wget "https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20241022.zip"
