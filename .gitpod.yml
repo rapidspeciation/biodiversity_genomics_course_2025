@@ -39,7 +39,7 @@ tasks:
     sudo apt install -y libgl1
 
     # install synteny plotter R package 
-    R -e 'install.packages("devtools", repos=NULL, type="source")'
+    R -e 'install.packages("devtools", repos=c("cran.priv","https://cloud.r-project.org"), type="source")'
     R -e 'devtools::install_github("Farre-lab/syntenyPlotteR")'
 
     # get the course data
