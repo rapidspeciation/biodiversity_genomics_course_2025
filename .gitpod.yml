@@ -16,7 +16,7 @@ tasks:
     mamba install -c bioconda fastp -y
 
     # install plink for LD-pruning, PCA, file conversion and other things
-    cd bin/
+    mkidr bin; cd bin/
     wget "https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20241022.zip"
     unzip plink_linux_x86_64_20241022.zip; cd ..
     
