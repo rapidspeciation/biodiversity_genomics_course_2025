@@ -1,4 +1,4 @@
-# biodiversity_genomics_course_2025
+# Biodiversity Genomics Course 2025
 Wellcome to the Biodiversity Genomics Course taught in CONICET, Argentina by Karin Näsvall, Nicol Rueda, Fernando Seixas and Joana Meier from the Wellcome Sanger Institute. It is organised by Melisa Olave at CONICET.
 
 
