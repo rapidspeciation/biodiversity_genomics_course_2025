@@ -11,8 +11,8 @@ https://gitpod.io/new/#https://github.com/rapidspeciation/biodiversity_genomics_
 
 When asked, click "continue" and wait until all tools are installed. 
 
-There are two terminals (menu on the right), one to install things "Installation" and one to work in "working". At the beginning, the installation terminal will be busy installing things and downloading the course material. This will take a minute. 
+There are two terminals (menu on the right), one to install things (named installation) and one to work in (named working). At the beginning, the installation terminal will be busy installing things and downloading the course material. This will take a minute. 
 
-Once all tools are installed and data downloaded, the terminal "working" will become active and you can start the course.
+Once all tools are installed and data downloaded, you will see the $ prompt appearing in the working terminal, indicating that it is now active and you can start the course.
 
 
