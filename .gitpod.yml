@@ -40,8 +40,8 @@ tasks:
     R -e 'install.packages("syntenyPlotteR", repos=NULL, type="source")'
 
     # get the course data
-    cd /workspace
-    git clone https://github.com/WCSCourses/K-mer_Biodiversity_Genomics_2025.git  # note this is still old
+    #cd /workspace
+    #git clone https://github.com/WCSCourses/K-mer_Biodiversity_Genomics_2025.git 
     
     mkdir -p data/Scer && wget -P data/Scer https://sk13.cog.sanger.ac.uk/SRR3265401_{1,2}.fastq.gz  # get data from s3 bucket
     
