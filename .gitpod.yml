@@ -55,16 +55,16 @@ tasks:
 - name: working
   init: gp sync-await bundle # Wait for previous 'inits' to complete
   command: |
-      echo ""
-      echo "👋 Welcome to the biodiversity genomics Gitpod workspace!"
-      echo "Please wait until all software is installed and data downloaded"
-      echo "You will see the $ prompt appearing when it is ready."
-      echo ""
       cd /workspace
       /workspace/mambaforge/bin/mamba init bash
       source ~/.bashrc 
       mamba activate biodiv
       export PATH=/workspace/bin:"$PATH"
+      echo ""
+      echo "👋 Welcome to the biodiversity genomics Gitpod workspace!"
+      echo "Please wait until all software is installed and data downloaded"
+      echo "You will see the $ prompt appearing when it is ready."
+      echo ""
 
 vscode:
   extensions:
